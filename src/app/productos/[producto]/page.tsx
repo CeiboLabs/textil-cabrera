@@ -16,8 +16,6 @@ type Props = {
   params: Promise<{ producto: string }>;
 };
 
-export const dynamicParams = false;
-
 export async function generateStaticParams() {
   const productParams = products.map((p) => ({ producto: p.slug }));
   const categoryParams = categories.map((c) => ({ producto: c.slug }));
